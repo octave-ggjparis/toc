@@ -4,13 +4,24 @@ using System.Collections;
 public class InteractionControl : MonoBehaviour {
 
     [SerializeField]
-    private InteractableContainer interactableScript;
+    private InteractableContainer[] interactableContainers;
+
+    [SerializeField]
+    private PlayerControls playerControlsScript;
 
     void Update()
     {
+        if(!playerControlsScript.isControllable)
+        {
+            return;
+        }
+
         if(Input.GetButtonDown("Fire1"))
         {
-            interactableScript.fireInteractions();
+            foreach (InteractableContainer interactableScript in interactableContainers)
+            {
+                interactableScript.fireInteractions();
+            }
         }
     }
 }

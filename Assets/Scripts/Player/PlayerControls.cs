@@ -12,6 +12,8 @@ public class PlayerControls : MonoBehaviour {
     [SerializeField]
     private Transform selfTransform;
 
+    public bool isControllable = true;
+
     private enum direction
     {
         LEFT,
@@ -28,6 +30,11 @@ public class PlayerControls : MonoBehaviour {
 	
 	void Update ()
     {
+        if(!isControllable)
+        {
+            return;
+        }
+
         float horizontal = Input.GetAxis("Horizontal");
 
         if (horizontal > 0.25f || horizontal < 0.25f)

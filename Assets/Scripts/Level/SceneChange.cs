@@ -40,4 +40,9 @@ public class SceneChange : MonoBehaviour {
             playerTransform.position.z
         );
     }
+
+    public int getScene()
+    {
+        return currentScene;
+    }
 }

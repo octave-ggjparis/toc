@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11443838}
   - 61: {fileID: 6195628}
   - 114: {fileID: 11479404}
+  - 114: {fileID: 11436684}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.19, y: 0, z: 1}
+  m_LocalPosition: {x: -7.45, y: -0.9, z: 1}
   m_LocalScale: {x: 1, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,6 +64,20 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
+--- !u!114 &11436684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b5cabd2c6107ba4687d7c0e56ade0ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfBody: {fileID: 5037384}
+  failureText: {fileID: 0}
+  playerControlsScript: {fileID: 11443838}
 --- !u!114 &11443838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -77,6 +92,7 @@ MonoBehaviour:
   maxSpeed: 100
   selfRigidBody: {fileID: 5037384}
   selfTransform: {fileID: 446982}
+  isControllable: 1
 --- !u!114 &11479404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,7 +104,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c76a3526745e841b2da97adf49d954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableScript: {fileID: 0}
+  interactableContainers:
+  - {fileID: 0}
+  playerControlsScript: {fileID: 11443838}
 --- !u!212 &21254852
 SpriteRenderer:
   m_ObjectHideFlags: 1

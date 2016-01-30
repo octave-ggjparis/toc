@@ -4,16 +4,49 @@ using System.Collections;
 public class Puzzle : MonoBehaviour {
 
     [SerializeField]
-    private ClueNumber[] Clues;
+    private string[] sequenceTags;
 
-    public void GeneratePuzzle()
+    [SerializeField]
+    private int[] sequenceNumber;
+
+    private int step = 0;
+
+    private int currentPress = 0;
+
+    public void CheckIsRightStep(GameObject interationObject)
     {
-        foreach(ClueNumber Clue in Clues)
+        Debug.Log("Checking for step");
+
+        if(step >= sequenceTags.Length)
         {
-            Clue.RemoveClue();
+            Debug.Log("Sequence is complete");
+            // It's complete
+            return;
         }
 
-        ClueNumber ActiveClue = Clues[Random.Range(0, Clues.Length)];
-        ActiveClue.AddClue(Random.Range(0, 10));
+        if(interationObject.tag == sequenceTags[step])
+        {
+            currentPress++;
+            Debug.Log("Currentpress: " + currentPress);
+            checkForNextStep();
+        }
     }
+
+    private void checkForNextStep()
+    {
+        int neededPress = (step >= sequenceNumber.Length) ? 1 : sequenceNumber[step];
+
+        if (currentPress >= neededPress)
+        {
+            Debug.Log("Next step");
+            currentPress = 0;
+            step++;
+        }
+    }
+
+    public bool isPuzzleDone()
+    {
+        return step >= sequenceTags.Length;
+    }
+
 }

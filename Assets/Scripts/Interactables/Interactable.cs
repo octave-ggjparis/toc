@@ -13,6 +13,9 @@ public class Interactable : MonoBehaviour {
     [SerializeField]
     private UnityEvent onNoLongerInteractable;
 
+    [SerializeField]
+    private Puzzle puzzleScript;
+
     private bool isInteractable;
 
     private void SetInteractable()
@@ -32,6 +35,7 @@ public class Interactable : MonoBehaviour {
     {
         if(isInteractable)
         {
+            puzzleScript.CheckIsRightStep(gameObject);
             onInteract.Invoke();
         }
     }

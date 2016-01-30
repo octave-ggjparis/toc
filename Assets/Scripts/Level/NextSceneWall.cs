@@ -10,11 +10,23 @@ public class NextSceneWall : MonoBehaviour {
     [SerializeField]
     private SceneChange SceneChangeScript;
 
+    [SerializeField]
+    private Puzzle puzzleScript;
+
+    [SerializeField]
+    private FailureReaction failureReactionScript;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Player")
         {
-            SceneChangeScript.NextScene();
+            if(!puzzleScript.isPuzzleDone())
+            {
+                failureReactionScript.failureState();
+            } else
+            {
+                SceneChangeScript.NextScene();
+            }
         }
     }
 }
