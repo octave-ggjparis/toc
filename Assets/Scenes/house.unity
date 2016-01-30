@@ -591,11 +591,6 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 21254852, guid: db2e4c8e4a43e844e90a6750d9bacb30,
     type: 2}
   m_PrefabInternal: {fileID: 1780427706}
---- !u!95 &1640807641 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 9592538, guid: db2e4c8e4a43e844e90a6750d9bacb30,
-    type: 2}
-  m_PrefabInternal: {fileID: 1780427706}
 --- !u!1001 &1669136670
 Prefab:
   m_ObjectHideFlags: 0
@@ -737,6 +732,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.3886364
       objectReference: {fileID: 0}
+    - target: {fileID: 11498508, guid: 3b6191ad3ceba664f9b8835d03f107cd, type: 2}
+      propertyPath: failState
+      value: 
+      objectReference: {fileID: 1780427707}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b6191ad3ceba664f9b8835d03f107cd, type: 2}
   m_IsPrefabParent: 0
@@ -904,22 +903,6 @@ Prefab:
       propertyPath: failureText
       value: 
       objectReference: {fileID: 826815768}
-    - target: {fileID: 446982, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.2591357
-      objectReference: {fileID: 0}
-    - target: {fileID: 446982, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.2591357
-      objectReference: {fileID: 0}
-    - target: {fileID: 446982, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.2591357
-      objectReference: {fileID: 0}
-    - target: {fileID: 11436684, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
-      propertyPath: playerAnimator
-      value: 
-      objectReference: {fileID: 1640807641}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
   m_IsPrefabParent: 0

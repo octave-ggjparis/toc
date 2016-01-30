@@ -36,13 +36,19 @@ public class FailureReaction : MonoBehaviour {
 
     public void failureState()
     {
-        selfBody.AddForce(new Vector2(pushBack, 0f));
         playerControlsScript.isControllable = false;
         failureText.gameObject.SetActive(true);
         playerAnimator.SetTrigger("stressEffect");
+        playerAnimator.SetBool("isWalking", false);
+        playerAnimator.speed = 1f;
 
         currentTimeout = timeout;
         isFailureState = true;
+    }
+
+    public void pushPlayerBack()
+    {
+        selfBody.AddForce(new Vector2(pushBack, 0f));
     }
 
     private void reactiveControls()
@@ -50,6 +56,5 @@ public class FailureReaction : MonoBehaviour {
         isFailureState = false;
         playerControlsScript.isControllable = true;
         failureText.gameObject.SetActive(false);
-        playerAnimator.SetBool("isWalking", false);
     }
 }

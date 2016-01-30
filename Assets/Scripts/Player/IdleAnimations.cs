@@ -21,7 +21,7 @@ public class IdleAnimations : MonoBehaviour {
 
         if(!isIdleWaiting)
         {
-            IdleWait = Random.Range(1, 3);
+            IdleWait = Random.Range(5, 15);
             isIdleWaiting = true;
         }
 

@@ -10,6 +10,9 @@ public class Puzzle : MonoBehaviour {
     [SerializeField]
     private int[] sequenceNumber;
 
+    [SerializeField]
+    private FailureReaction failState;
+
     private int step = 0;
 
     private int currentPress = 0;
@@ -75,6 +78,7 @@ public class Puzzle : MonoBehaviour {
         } else
         {
             Debug.Log("Fail");
+            failState.failureState();
             onFailureStep.Invoke();
         }
 

@@ -23,6 +23,7 @@ public class NextSceneWall : MonoBehaviour {
             if(!puzzleScript.isPuzzleDone())
             {
                 failureReactionScript.failureState();
+                failureReactionScript.pushPlayerBack();
             } else
             {
                 SceneChangeScript.NextScene();
