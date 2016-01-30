@@ -12,6 +12,9 @@ public class PlayerControls : MonoBehaviour {
     [SerializeField]
     private Transform selfTransform;
 
+    [SerializeField]
+    private Animator playerAnimator;
+
     public bool isControllable = true;
 
     private enum direction
@@ -21,7 +24,7 @@ public class PlayerControls : MonoBehaviour {
     }
 
     private Vector3 initialScale;
-    private direction currentDirection = direction.LEFT;
+    private direction currentDirection = direction.RIGHT;
 
 	void Awake ()
     {
@@ -41,6 +44,8 @@ public class PlayerControls : MonoBehaviour {
         {
             move(horizontal);
         }
+
+        playerAnimator.speed = Mathf.Clamp(Mathf.Abs(selfRigidBody.velocity.x), 0, 2);
 	}
 
     private void move(float horizontal)
@@ -65,7 +70,7 @@ public class PlayerControls : MonoBehaviour {
         currentDirection = (currentDirection == direction.LEFT) ? direction.RIGHT : direction.LEFT;
 
         selfTransform.localScale = new Vector3(
-            (currentDirection == direction.LEFT) ? initialScale.x : -initialScale.x,
+            (currentDirection == direction.LEFT) ? -initialScale.x : initialScale.x,
             initialScale.y,
             1
         );

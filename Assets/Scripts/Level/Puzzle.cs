@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class Puzzle : MonoBehaviour {
 
@@ -12,6 +13,31 @@ public class Puzzle : MonoBehaviour {
     private int step = 0;
 
     private int currentPress = 0;
+
+    [SerializeField]
+    private float pressValidationTimeout = 2f;
+
+    [SerializeField]
+    private UnityEvent onSuccessStep;
+
+    [SerializeField]
+    private UnityEvent onFailureStep;
+
+    private float currentPressValidation = 0f;
+    private bool pressValidation = false;
+
+    void Update()
+    {
+        if(pressValidation)
+        {
+            currentPressValidation -= Time.deltaTime;
+            if(currentPressValidation <= 0f)
+            {
+                checkForNextStep();
+                pressValidation = false;
+            }
+        }
+    }
 
     public void CheckIsRightStep(GameObject interationObject)
     {
@@ -26,9 +52,14 @@ public class Puzzle : MonoBehaviour {
 
         if(interationObject.tag == sequenceTags[step])
         {
-            currentPress++;
             Debug.Log("Currentpress: " + currentPress);
-            checkForNextStep();
+            currentPress++;
+            currentPressValidation = pressValidationTimeout;
+            pressValidation = true;
+        } else
+        {
+            onFailureStep.Invoke();
+            resetPress();
         }
     }
 
@@ -36,17 +67,28 @@ public class Puzzle : MonoBehaviour {
     {
         int neededPress = (step >= sequenceNumber.Length) ? 1 : sequenceNumber[step];
 
-        if (currentPress >= neededPress)
+        if (currentPress == neededPress)
         {
             Debug.Log("Next step");
-            currentPress = 0;
+            onSuccessStep.Invoke();
             step++;
+        } else
+        {
+            Debug.Log("Fail");
+            onFailureStep.Invoke();
         }
+
+        resetPress();
+    }
+
+    void resetPress()
+    {
+        pressValidation = false;
+        currentPress = 0;
     }
 
     public bool isPuzzleDone()
     {
         return step >= sequenceTags.Length;
     }
-
 }
