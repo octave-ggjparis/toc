@@ -45,7 +45,15 @@ public class PlayerControls : MonoBehaviour {
             move(horizontal);
         }
 
-        playerAnimator.speed = Mathf.Clamp(Mathf.Abs(selfRigidBody.velocity.x), 0, 2);
+        playerAnimator.SetBool("isWalking", Mathf.Abs(selfRigidBody.velocity.x) > 0.05f);
+
+        if(playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("Walk"))
+        {
+            playerAnimator.speed = Mathf.Clamp(Mathf.Abs(selfRigidBody.velocity.x), 0, 2);
+        } else
+        {
+            playerAnimator.speed = 1f;
+        }
 	}
 
     private void move(float horizontal)

@@ -13,8 +13,11 @@ public class FailureReaction : MonoBehaviour {
     [SerializeField]
     private PlayerControls playerControlsScript;
 
+    [SerializeField]
+    private Animator playerAnimator;
+
     private float pushBack = -2000f;
-    private float timeout = 2f;
+    private float timeout = 4f;
 
     private bool isFailureState = false;
     private float currentTimeout = 0f;
@@ -36,6 +39,7 @@ public class FailureReaction : MonoBehaviour {
         selfBody.AddForce(new Vector2(pushBack, 0f));
         playerControlsScript.isControllable = false;
         failureText.gameObject.SetActive(true);
+        playerAnimator.SetTrigger("stressEffect");
 
         currentTimeout = timeout;
         isFailureState = true;
@@ -46,5 +50,6 @@ public class FailureReaction : MonoBehaviour {
         isFailureState = false;
         playerControlsScript.isControllable = true;
         failureText.gameObject.SetActive(false);
+        playerAnimator.SetBool("isWalking", false);
     }
 }

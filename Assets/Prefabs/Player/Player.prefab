@@ -15,6 +15,7 @@ GameObject:
   - 114: {fileID: 11479404}
   - 114: {fileID: 11436684}
   - 95: {fileID: 9592538}
+  - 114: {fileID: 11470152}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -112,6 +113,18 @@ MonoBehaviour:
   selfTransform: {fileID: 446982}
   playerAnimator: {fileID: 9592538}
   isControllable: 1
+--- !u!114 &11470152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8993bfa74688894abff1222380fefe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfAnimator: {fileID: 9592538}
 --- !u!114 &11479404
 MonoBehaviour:
   m_ObjectHideFlags: 1
