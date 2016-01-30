@@ -7,6 +7,9 @@ public class LightSwitch : MonoBehaviour {
     private SpriteRenderer[] affectedSprite;
 
     [SerializeField]
+    private GameObject[] lightSources;
+
+    [SerializeField]
     private Material LitMaterial;
 
     [SerializeField]
@@ -23,6 +26,11 @@ public class LightSwitch : MonoBehaviour {
             {
                 itemRender.material = LitMaterial;
             }
+        }
+
+        foreach(GameObject lightSource in lightSources)
+        {
+            lightSource.SetActive(!lightSource.activeInHierarchy);
         }
     }
 }

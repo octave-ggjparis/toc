@@ -265,13 +265,17 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 650143922}
     m_Modifications:
+    - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: lightSources.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 487752, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 10.43
+      value: 7.2
       objectReference: {fileID: 0}
     - target: {fileID: 487752, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.83
+      value: -1.89
       objectReference: {fileID: 0}
     - target: {fileID: 487752, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -321,6 +325,22 @@ Prefab:
       propertyPath: affectedSprite.Array.data[2]
       value: 
       objectReference: {fileID: 1640807640}
+    - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: lightSources.Array.data[0]
+      value: 
+      objectReference: {fileID: 223509956}
+    - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: lightSources.Array.data[1]
+      value: 
+      objectReference: {fileID: 596350834}
+    - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: lightSources.Array.data[2]
+      value: 
+      objectReference: {fileID: 1746332372}
+    - target: {fileID: 157044, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
   m_IsPrefabParent: 0
@@ -494,8 +514,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 223509956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.67, y: -2.25, z: 0}
-  m_LocalScale: {x: 4.1731653, y: 4.173164, z: 4.173164}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4.1, y: 4.1, z: 4.1}
   m_Children: []
   m_Father: {fileID: 1137466955}
   m_RootOrder: 0
@@ -551,6 +571,7 @@ MonoBehaviour:
   scene: 1
   items:
   - {fileID: 2036301061}
+  - {fileID: 1982929505}
   sceneChangeScript: {fileID: 924636893}
 --- !u!1001 &533371902
 Prefab:
@@ -609,6 +630,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1662375088}
     m_Modifications:
+    - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: lightSources.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
       propertyPath: affectedSprite.Array.size
       value: 6
@@ -709,6 +734,14 @@ Prefab:
       propertyPath: puzzleScript
       value: 
       objectReference: {fileID: 938325493}
+    - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: lightSources.Array.data[0]
+      value: 
+      objectReference: {fileID: 1253828911}
+    - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: lightSources.Array.data[1]
+      value: 
+      objectReference: {fileID: 1463458967}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
   m_IsPrefabParent: 0
@@ -775,7 +808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &596350835
 Transform:
   m_ObjectHideFlags: 0
@@ -783,8 +816,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 596350834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.87, y: -5.89, z: 0}
-  m_LocalScale: {x: 4.0901732, y: 4.0901747, z: 4.0901747}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4.1, y: 4.1, z: 1}
   m_Children: []
   m_Father: {fileID: 1137466955}
   m_RootOrder: 1
@@ -846,6 +879,7 @@ Transform:
   m_LocalScale: {x: 3.000307, y: 2.6252685, z: 2.6252685}
   m_Children:
   - {fileID: 2036301062}
+  - {fileID: 1982929502}
   m_Father: {fileID: 1137466955}
   m_RootOrder: 3
 --- !u!1001 &665487250
@@ -965,7 +999,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 425694, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 26.78
+      value: 31.09
       objectReference: {fileID: 0}
     - target: {fileID: 425694, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1409,7 +1443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1253828912
 Transform:
   m_ObjectHideFlags: 0
@@ -1459,6 +1493,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1662375088}
     m_Modifications:
+    - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: lightSources.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
       propertyPath: affectedSprite.Array.size
       value: 5
@@ -1517,7 +1555,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 487752, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.43300056
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 487752, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
       propertyPath: m_LocalScale.x
@@ -1551,6 +1589,22 @@ Prefab:
       propertyPath: affectedSprite.Array.data[4]
       value: 
       objectReference: {fileID: 1640807640}
+    - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: lightSources.Array.data[0]
+      value: 
+      objectReference: {fileID: 1253828911}
+    - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: lightSources.Array.data[1]
+      value: 
+      objectReference: {fileID: 1463458967}
+    - target: {fileID: 157044, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493292, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: puzzleScript
+      value: 
+      objectReference: {fileID: 938325493}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
   m_IsPrefabParent: 0
@@ -1718,7 +1772,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 459310, guid: 0fe5c111e4420b84692d3adf42cfe4dd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 459310, guid: 0fe5c111e4420b84692d3adf42cfe4dd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1928,7 +1982,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1746332373
 Transform:
   m_ObjectHideFlags: 0
@@ -1936,8 +1990,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1746332372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -1.27, z: 0}
-  m_LocalScale: {x: 4.1483064, y: 4.1483045, z: 4.1483045}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4.1, y: 4.1, z: 0}
   m_Children: []
   m_Father: {fileID: 1137466955}
   m_RootOrder: 2
@@ -2073,7 +2127,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 446982, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.88
+      value: -3.25
       objectReference: {fileID: 0}
     - target: {fileID: 446982, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2101,7 +2155,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 446982, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11479404, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
       propertyPath: interactableContainers.Array.data[0]
@@ -2230,6 +2284,108 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 446982, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
   m_PrefabInternal: {fileID: 1780427706}
+--- !u!1001 &1965932588
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 650143922}
+    m_Modifications:
+    - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: lightSources.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 487752, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 487752, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 487752, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487752, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487752, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487752, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487752, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 487752, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493292, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1689351197}
+    - target: {fileID: 11493292, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1689351199}
+    - target: {fileID: 11493292, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1689351199}
+    - target: {fileID: 11493292, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: puzzleScript
+      value: 
+      objectReference: {fileID: 278854682}
+    - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: affectedSprite.Array.data[0]
+      value: 
+      objectReference: {fileID: 1524774532}
+    - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: affectedSprite.Array.data[2]
+      value: 
+      objectReference: {fileID: 1640807640}
+    - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: lightSources.Array.data[0]
+      value: 
+      objectReference: {fileID: 223509956}
+    - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: lightSources.Array.data[1]
+      value: 
+      objectReference: {fileID: 596350834}
+    - target: {fileID: 11432198, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: lightSources.Array.data[2]
+      value: 
+      objectReference: {fileID: 1746332372}
+    - target: {fileID: 157044, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 487752, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 487752, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 487752, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 157044, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+      propertyPath: m_Name
+      value: Light (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1967999520
 GameObject:
   m_ObjectHideFlags: 0
@@ -2334,6 +2490,16 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   puzzleScript: {fileID: 938325493}
+--- !u!4 &1982929502 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 487752, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4, type: 2}
+  m_PrefabInternal: {fileID: 1965932588}
+--- !u!114 &1982929505 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11493292, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1965932588}
+  m_Script: {fileID: 11500000, guid: b70ee660e4271d4489a20697b0b3bb60, type: 3}
 --- !u!114 &2036301061 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11493292, guid: 072766c8fdf7d7a46aea59c2fb0b8bf4,
