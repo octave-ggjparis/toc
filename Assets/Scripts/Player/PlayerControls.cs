@@ -62,6 +62,5 @@ public class PlayerControls : MonoBehaviour {
             initialScale.y,
             1
         );
-
     }
 }
