@@ -14,7 +14,8 @@ public class InteractableContainer : MonoBehaviour {
 
     public void fireInteractions()
     {
-        if(sceneChangeScript.getScene() != scene)
+        Debug.Log(sceneChangeScript.getScene()); Debug.Log(scene);
+        if (sceneChangeScript.getScene() != scene)
         {
             return;
         }

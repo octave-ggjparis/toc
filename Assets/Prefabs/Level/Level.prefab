@@ -41,7 +41,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneDistance: 20
-  numberOfScenes: 3
+  numberOfScenes: 5
   playerPositionAfterChange: -7.25
   playerTransform: {fileID: 0}
   cameraTransform: {fileID: 0}

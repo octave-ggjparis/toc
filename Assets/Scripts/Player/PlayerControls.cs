@@ -33,6 +33,12 @@ public class PlayerControls : MonoBehaviour {
 	
 	void Update ()
     {
+        //debug
+        if(Input.GetButtonDown("Fire2"))
+        {
+            playerAnimator.SetTrigger("turnBack");
+        }
+
         if(!isControllable)
         {
             return;

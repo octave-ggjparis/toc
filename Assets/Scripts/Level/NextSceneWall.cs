@@ -20,14 +20,15 @@ public class NextSceneWall : MonoBehaviour {
     {
         if(other.gameObject.tag == "Player")
         {
-            if(!puzzleScript.isPuzzleDone())
+            /*if(!puzzleScript.isPuzzleDone())
             {
                 failureReactionScript.failureState();
                 failureReactionScript.pushPlayerBack();
             } else
-            {
+            {*/
+                onNextScene.Invoke();
                 SceneChangeScript.NextScene();
-            }
+            //}
         }
     }
 }
