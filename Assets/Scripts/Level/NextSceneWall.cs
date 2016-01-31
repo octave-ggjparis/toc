@@ -16,19 +16,23 @@ public class NextSceneWall : MonoBehaviour {
     [SerializeField]
     private FailureReaction failureReactionScript;
 
+    [SerializeField]
+    private Narrator narrationScript;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Player")
         {
-            /*if(!puzzleScript.isPuzzleDone())
+            if(!puzzleScript.isPuzzleDone())
             {
                 failureReactionScript.failureState();
                 failureReactionScript.pushPlayerBack();
+                narrationScript.setText("Non, non, non ! Je ne peux pas sortir tant que je n’ai pas tout fait !");
             } else
-            {*/
+            {
                 onNextScene.Invoke();
                 SceneChangeScript.NextScene();
-            //}
+            }
         }
     }
 }

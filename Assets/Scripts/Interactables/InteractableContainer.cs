@@ -16,6 +16,7 @@ public class InteractableContainer : MonoBehaviour {
     {
         if (sceneChangeScript.getScene() != scene)
         {
+            //Debug.Log("Scene: " + scene + ", Not in scene " + sceneChangeScript.getScene());
             return;
         }
 

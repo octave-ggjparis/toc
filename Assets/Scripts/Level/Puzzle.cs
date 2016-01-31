@@ -29,6 +29,9 @@ public class Puzzle : MonoBehaviour {
     [SerializeField]
     private UnityEvent onFailureStep;
 
+    [SerializeField]
+    private Narrator narratorScript;
+
     private float currentPressValidation = 0f;
     private bool pressValidation = false;
 
@@ -64,11 +67,17 @@ public class Puzzle : MonoBehaviour {
             failState.failureState();
             onFailureStep.Invoke();
             resetPress();
+            narratorScript.setText("Non, ce n’est pas le bon objet ! Je ne vais pas y arriver !");
             return false;
         }
 
         Debug.Log("Currentpress: " + currentPress);
         currentPress++;
+        if(currentPress > 9)
+        {
+            currentPress = 9;
+        }
+
         currentPressValidation = timer;
         pressValidation = true;
 
@@ -92,6 +101,7 @@ public class Puzzle : MonoBehaviour {
             Debug.Log("Fail");
             failState.failureState();
             onFailureStep.Invoke();
+            narratorScript.setText("Non, je dois le faire un nombre exacte de fois… sinon je vais craquer !");
         }
 
         resetPress();
@@ -106,5 +116,11 @@ public class Puzzle : MonoBehaviour {
     public bool isPuzzleDone()
     {
         return step >= sequenceTags.Length;
+    }
+
+    public int getStep()
+    {
+        Debug.Log("Step " + step);
+        return step;
     }
 }

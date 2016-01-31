@@ -7,11 +7,22 @@ public class PictureTogglable : MonoBehaviour {
     private PlayerTurnBack playerTurnBackScript;
 
     [SerializeField]
-    private GameObject spriteObject;
+    private SpriteRenderer spriteObject;
+
+    [SerializeField]
+    private Sprite sprite1;
+
+    [SerializeField]
+    private Sprite sprite2;
+
+    private bool isSprite2 = false;
 
     public void action()
     {
-        spriteObject.SetActive(!spriteObject.activeInHierarchy);
+        Debug.Log("toggle sprite");
+        spriteObject.sprite = isSprite2 ? sprite1 : sprite2;
+        isSprite2 = !isSprite2;
+
         playerTurnBackScript.turnBack();
     }
 }
