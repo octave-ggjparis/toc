@@ -11,7 +11,7 @@ public class Tutorial : MonoBehaviour {
         switch(currentPuzzle.getStep())
         {
             case 0 :
-                narratorScript.setText("Hum, je dois sortir, je n’ai plus besoin de l’autre…");
+                narratorScript.setText("Hum, je n’ai plus besoin de l’autre…");
                 break;
 
             case 1:

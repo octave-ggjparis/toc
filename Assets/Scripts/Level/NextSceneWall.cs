@@ -30,6 +30,7 @@ public class NextSceneWall : MonoBehaviour {
                 narrationScript.setText("Non, non, non ! Je ne peux pas sortir tant que je n’ai pas tout fait !");
             } else
             {
+            Debug.Log("next scene");
                 onNextScene.Invoke();
                 SceneChangeScript.NextScene();
             }
