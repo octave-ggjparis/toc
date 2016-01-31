@@ -1,76 +1,84 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &157044
+--- !u!1 &158014
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 487752}
-  - 212: {fileID: 21273824}
-  - 114: {fileID: 11493292}
-  - 61: {fileID: 6169532}
-  - 114: {fileID: 11432198}
+  - 4: {fileID: 462900}
+  - 114: {fileID: 11403002}
+  - 61: {fileID: 6197204}
+  - 114: {fileID: 11477548}
   m_Layer: 0
-  m_Name: Light
-  m_TagString: Light
+  m_Name: lavabo
+  m_TagString: Wash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &487752
+--- !u!1 &194032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 479664}
+  - 212: {fileID: 21256036}
+  m_Layer: 0
+  m_Name: Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &462900
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 157044}
+  m_GameObject: {fileID: 158014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.95, y: -0.37, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_Children:
+  - {fileID: 479664}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &6169532
+--- !u!4 &479664
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 462900}
+  m_RootOrder: 0
+--- !u!61 &6197204
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 157044}
+  m_GameObject: {fileID: 158014}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -3.369228, y: -0.40180326}
   serializedVersion: 2
-  m_Size: {x: 0.64, y: 0.64}
---- !u!114 &11432198
+  m_Size: {x: 1.4437246, y: 1.0090278}
+--- !u!114 &11403002
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 157044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71604613e6eea8e42828aa09e95a3872, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  affectedSprite:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  lightSources:
-  - {fileID: 0}
-  LitMaterial: {fileID: 2100000, guid: 6f4949a6901d78f47824610ca3da93da, type: 2}
-  DarkMaterial: {fileID: 2100000, guid: 5cfda7c5ddf6db843a18abd17585d614, type: 2}
---- !u!114 &11493292
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 157044}
+  m_GameObject: {fileID: 158014}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b70ee660e4271d4489a20697b0b3bb60, type: 3}
@@ -79,8 +87,8 @@ MonoBehaviour:
   onInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11432198}
-        m_MethodName: toggleLight
+      - m_Target: {fileID: 11477548}
+        m_MethodName: action
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -103,13 +111,27 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   puzzleScript: {fileID: 0}
-  timer: 2
---- !u!212 &21273824
+  timer: 3
+--- !u!114 &11477548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c984cca87e6a08742b5e879be0d0e8c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTurnBackScript: {fileID: 0}
+  spriteObject: {fileID: 194032}
+  timeout: 1.2
+--- !u!212 &21256036
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 157044}
+  m_GameObject: {fileID: 194032}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -129,9 +151,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: ab7d71aa0cc68c649b76f35c5400a91b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 6d8cb71753fedb646adad0e767d33592, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000
@@ -143,5 +165,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 157044}
+  m_RootGameObject: {fileID: 158014}
   m_IsPrefabParent: 1

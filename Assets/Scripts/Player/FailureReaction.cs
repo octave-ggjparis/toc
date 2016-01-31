@@ -8,53 +8,23 @@ public class FailureReaction : MonoBehaviour {
     private Rigidbody2D selfBody;
 
     [SerializeField]
-    private Text failureText;
-
-    [SerializeField]
-    private PlayerControls playerControlsScript;
+    private LoseControl loseControlsScript;
 
     [SerializeField]
     private Animator playerAnimator;
 
-    private float pushBack = -2000f;
-    private float timeout = 4f;
-
-    private bool isFailureState = false;
-    private float currentTimeout = 0f;
-
-    void Update()
-    {
-        if(isFailureState)
-        {
-            currentTimeout -= Time.deltaTime;
-            if(currentTimeout <= 0f)
-            {
-                reactiveControls();
-            }
-        }
-    }
+    [SerializeField]
+    private float pushBack = -1500f;
 
     public void failureState()
     {
-        playerControlsScript.isControllable = false;
-        failureText.gameObject.SetActive(true);
         playerAnimator.SetTrigger("stressEffect");
-        playerAnimator.SetBool("isWalking", false);
         playerAnimator.speed = 1f;
-
-        currentTimeout = timeout;
-        isFailureState = true;
+        loseControlsScript.removeControls(4f);
     }
 
     public void pushPlayerBack()
     {
         selfBody.AddForce(new Vector2(pushBack, 0f));
-    }
-
-    private void reactiveControls()
-    {
-        isFailureState = false;
-        playerControlsScript.isControllable = true;
-        failureText.gameObject.SetActive(false);
     }
 }

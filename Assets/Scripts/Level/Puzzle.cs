@@ -13,12 +13,15 @@ public class Puzzle : MonoBehaviour {
     [SerializeField]
     private FailureReaction failState;
 
+    [SerializeField]
+    private CircularProgressBar circularProgressScript;
+
+    [SerializeField]
+    private GameObject timerObject;
+
     private int step = 0;
 
     private int currentPress = 0;
-
-    [SerializeField]
-    private float pressValidationTimeout = 2f;
 
     [SerializeField]
     private UnityEvent onSuccessStep;
@@ -42,7 +45,7 @@ public class Puzzle : MonoBehaviour {
         }
     }
 
-    public void CheckIsRightStep(GameObject interationObject)
+    public bool CheckIsRightStep(GameObject interationObject, float timer = 2f)
     {
         Debug.Log("Checking for step");
 
@@ -50,20 +53,29 @@ public class Puzzle : MonoBehaviour {
         {
             Debug.Log("Sequence is complete");
             // It's complete
-            return;
+            return false;
         }
 
-        if(interationObject.tag == sequenceTags[step])
+        Debug.Log("Item: " + interationObject.tag + ", needed: " + sequenceTags[step]);
+
+        if(interationObject.tag != sequenceTags[step])
         {
-            Debug.Log("Currentpress: " + currentPress);
-            currentPress++;
-            currentPressValidation = pressValidationTimeout;
-            pressValidation = true;
-        } else
-        {
+            Debug.Log("Wrong item!");
+            failState.failureState();
             onFailureStep.Invoke();
             resetPress();
+            return false;
         }
+
+        Debug.Log("Currentpress: " + currentPress);
+        currentPress++;
+        currentPressValidation = timer;
+        pressValidation = true;
+
+        timerObject.SetActive(true);
+        circularProgressScript.setTime(timer);
+        circularProgressScript.hit();
+        return true;
     }
 
     private void checkForNextStep()

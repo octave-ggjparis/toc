@@ -16,6 +16,9 @@ public class Interactable : MonoBehaviour {
     [SerializeField]
     private Puzzle puzzleScript;
 
+    [SerializeField]
+    public float timer = 2f;
+
     private bool isInteractable;
 
     private void SetInteractable()
@@ -33,9 +36,8 @@ public class Interactable : MonoBehaviour {
     // If the object is OK to interact, perform the interaction
     public void Interact()
     {
-        if(isInteractable)
+        if(isInteractable && puzzleScript.CheckIsRightStep(gameObject, timer))
         {
-            puzzleScript.CheckIsRightStep(gameObject);
             onInteract.Invoke();
         }
     }

@@ -16,6 +16,8 @@ GameObject:
   - 114: {fileID: 11436684}
   - 95: {fileID: 9592538}
   - 114: {fileID: 11470152}
+  - 114: {fileID: 11456310}
+  - 114: {fileID: 11460196}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -30,7 +32,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.88, y: -1.14, z: 1}
+  m_LocalPosition: {x: -3.25, y: -1.14, z: 1}
   m_LocalScale: {x: 1.2591357, y: 1.2591357, z: 1.2591357}
   m_Children: []
   m_Father: {fileID: 0}
@@ -95,9 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selfBody: {fileID: 5037384}
-  failureText: {fileID: 0}
-  playerControlsScript: {fileID: 11443838}
+  loseControlsScript: {fileID: 0}
   playerAnimator: {fileID: 9592538}
+  pushBack: -2000
 --- !u!114 &11443838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,6 +116,32 @@ MonoBehaviour:
   selfTransform: {fileID: 446982}
   playerAnimator: {fileID: 9592538}
   isControllable: 1
+--- !u!114 &11456310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb10f9e905a1daf46ab5b8579a28cc96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerControlScript: {fileID: 11443838}
+  playerAnimator: {fileID: 9592538}
+--- !u!114 &11460196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcdcc36c402dad4b8c34a7125c9e6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loseControlScript: {fileID: 11456310}
+  playerAnimator: {fileID: 9592538}
 --- !u!114 &11470152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -138,6 +166,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableContainers:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   playerControlsScript: {fileID: 11443838}
 --- !u!212 &21254852
