@@ -9,7 +9,7 @@ public class Narrator : MonoBehaviour {
 
     private Color currentColor;
 
-    private float timeout = 1.5f;
+    private float timeout = 2.5f;
     private float currentTimeout = 0f;
 
     void Update()

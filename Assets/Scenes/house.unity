@@ -1946,6 +1946,17 @@ MonoBehaviour:
           m_StringArgument: "Tout refaire\u2026 une derni\xE8re fois\u2026"
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1184249805}
+        m_MethodName: calmDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   SceneChangeScript: {fileID: 924636893}
@@ -2007,7 +2018,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11438192, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
       propertyPath: onNextScene.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 425694, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2104,6 +2115,26 @@ Prefab:
     - target: {fileID: 11438192, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
       propertyPath: onNextScene.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: "Est-ce qu\u2019ils coulent toujours?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438192, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
+      propertyPath: onNextScene.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438192, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
+      propertyPath: onNextScene.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438192, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
+      propertyPath: onNextScene.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1184249805}
+    - target: {fileID: 11438192, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
+      propertyPath: onNextScene.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: calmDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438192, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
+      propertyPath: onNextScene.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
@@ -2217,7 +2248,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11438192, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
       propertyPath: onNextScene.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 425694, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2327,6 +2358,26 @@ Prefab:
       propertyPath: onNextScene.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 2100000, guid: 5cfda7c5ddf6db843a18abd17585d614, type: 2}
+    - target: {fileID: 11438192, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
+      propertyPath: onNextScene.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438192, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
+      propertyPath: onNextScene.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438192, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
+      propertyPath: onNextScene.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1184249805}
+    - target: {fileID: 11438192, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
+      propertyPath: onNextScene.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: calmDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 11438192, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
+      propertyPath: onNextScene.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9368649067c7e6248bb848bbe558f3d0, type: 2}
   m_IsPrefabParent: 0
@@ -2470,6 +2521,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: "Au centre\u2026 il faut le mettre..."
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1184249805}
+        m_MethodName: calmDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -2704,12 +2766,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1780427706}
   m_Script: {fileID: 11500000, guid: 4fcdcc36c402dad4b8c34a7125c9e6c7, type: 3}
---- !u!114 &1184249798 stripped
+--- !u!114 &1184249805 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11456310, guid: db2e4c8e4a43e844e90a6750d9bacb30,
+  m_PrefabParentObject: {fileID: 11483346, guid: db2e4c8e4a43e844e90a6750d9bacb30,
     type: 2}
   m_PrefabInternal: {fileID: 1780427706}
-  m_Script: {fileID: 11500000, guid: eb10f9e905a1daf46ab5b8579a28cc96, type: 3}
+  m_Script: {fileID: 11500000, guid: d76d791308d337d4692e32c4c9270062, type: 3}
 --- !u!4 &1202561446
 Transform:
   m_ObjectHideFlags: 0
@@ -3331,6 +3393,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 162238, guid: abde799982f19f94eaa53b15a3f01c34, type: 2}
+      propertyPath: m_TagString
+      value: Shower
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abde799982f19f94eaa53b15a3f01c34, type: 2}
   m_IsPrefabParent: 0
@@ -3692,10 +3758,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 11479404, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
-      propertyPath: interactableContainers.Array.size
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 446982, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
       propertyPath: m_LocalPosition.x
       value: -3.25
@@ -3728,6 +3790,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 11483346, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 854407165}
     - target: {fileID: 11479404, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
       propertyPath: interactableContainers.Array.data[0]
       value: 
@@ -3740,14 +3806,6 @@ Prefab:
       propertyPath: interactableContainers.Array.data[2]
       value: 
       objectReference: {fileID: 1662375089}
-    - target: {fileID: 11436684, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
-      propertyPath: loseControlsScript
-      value: 
-      objectReference: {fileID: 1184249798}
-    - target: {fileID: 21254852, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 11479404, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
       propertyPath: interactableContainers.Array.data[3]
       value: 
