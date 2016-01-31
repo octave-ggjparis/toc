@@ -2228,7 +2228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: 0
-  intensity: 0.25
+  intensity: 0.2
   chromaticAberration: 0
   axialAberration: 0.5
   blur: 0
@@ -3810,6 +3810,10 @@ Prefab:
       propertyPath: interactableContainers.Array.data[3]
       value: 
       objectReference: {fileID: 103795039}
+    - target: {fileID: 11483346, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
+      propertyPath: vignette
+      value: 
+      objectReference: {fileID: 854407168}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db2e4c8e4a43e844e90a6750d9bacb30, type: 2}
   m_IsPrefabParent: 0
